@@ -278,10 +278,10 @@ namespace FarseerPhysics.Samples
             // Load sprites
             //_circleSprite = Content.Load<Texture2D>("CircleSprite1"); //  96px x 96px => 1.5m x 1.5m
             _circleSprite = Content.Load<Texture2D>("body_robot"); //  96px x 96px => 1.5m x 1.5m
-            _groundSprite = Content.Load<Texture2D>("GroundSprite"); // 512px x 64px =>   8m x 1m
+            //_groundSprite = Content.Load<Texture2D>("GroundSprite"); // 512px x 64px =>   8m x 1m
 
             /* We need XNA to draw the ground and circle at the center of the shapes */
-            _groundOrigin = new Vector2(_groundSprite.Width / 2f, _groundSprite.Height / 2f);
+            //_groundOrigin = new Vector2(_groundSprite.Width / 2f, _groundSprite.Height / 2f);
             _circleOrigin = new Vector2(_circleSprite.Width / 2f, _circleSprite.Height / 2f);
 
             // Farseer expects objects to be scaled to MKS (meters, kilos, seconds)
@@ -1259,43 +1259,43 @@ namespace FarseerPhysics.Samples
             {
                 index = 1;
                 time = 2000;
-                dt = MoveBody(_circleBody, ref index, ref linear, ref angular);
+                dt = MoveBody(_circleBody, ref index, ref s, ref w);
             }
             if (state.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Q)) //move left
             {
                 index = 0;
                 time = 2000;
-                dt = MoveBody(_circleBody, ref index, ref linear, ref angular);
+                dt = MoveBody(_circleBody, ref index, ref s, ref w);
             }
             if (state.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.E)) //move right
             {
                 index = 2;
                 time = 2000;
-                dt = MoveBody(_circleBody, ref index, ref linear, ref angular);
+                dt = MoveBody(_circleBody, ref index, ref s, ref w);
             }
             if (state.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.A))  //back left
             {
                 index = 5;
                 time = 2000;
-                dt = MoveBody(_circleBody, ref index, ref linear, ref angular);
+                dt = MoveBody(_circleBody, ref index, ref s, ref w);
             }
             if (state.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.D))  //back left
             {
                 index = 3;
                 time = 2000;
-                dt = MoveBody(_circleBody, ref index, ref linear, ref angular);
+                dt = MoveBody(_circleBody, ref index, ref s, ref w);
             }
             if (state.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.S))  //back left
             {
                 index = 4;
                 time = 2000;
-                dt = MoveBody(_circleBody, ref index, ref linear, ref angular);
+                dt = MoveBody(_circleBody, ref index, ref s, ref w);
             }
             if (state.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.X))  //back left
             {
                 index = 6;
                 time = 2000;
-                dt = MoveBody(_circleBody, ref index, ref linear, ref angular);
+                dt = MoveBody(_circleBody, ref index, ref s, ref w);
             }
 
 
